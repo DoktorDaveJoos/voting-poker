@@ -18,7 +18,8 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="h-full font-sans antialiased">
-        @inertia
+{{--        @inertia--}}
+        <div class="h-full" id="app" data-page="{{ json_encode($page) }}"></div>
 
         @env ('local')
             <script src="http://localhost:8080/js/bundle.js"></script>

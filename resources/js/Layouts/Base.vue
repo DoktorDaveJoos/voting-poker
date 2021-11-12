@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-full">
+    <div class="min-h-full flex flex-col">
         <Popover as="header" class="pb-24 bg-indigo-600" v-slot="{ open }">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
                 <div class="relative py-5 flex items-center justify-center lg:justify-between">
@@ -52,18 +52,18 @@
             </div>
         </Popover>
 
-        <main class="-mt-24 pb-8">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-                <h1 class="sr-only">Page title</h1>
+        <main class="-mt-24 pb-8 flex-1 flex flex-col items-center">
+
+            <div class="w-full flex flex-1 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
                 <!-- Main 3 column grid -->
-                <div class="grid grid-cols-1 gap-4 items-start lg:grid-cols-3 lg:gap-8">
+                <div class="w-full mx-auto grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+
                     <!-- Left column -->
                     <div class="grid grid-cols-1 gap-4 lg:col-span-2">
                         <section aria-labelledby="section-1-title">
-                            <h2 class="sr-only" id="section-1-title">Section title</h2>
-                            <div class="rounded-lg bg-white overflow-hidden shadow">
-                                <div class="p-6">
-                                    <slot></slot>
+                            <div class="h-full rounded-lg bg-white overflow-hidden shadow">
+                                <div class="p-6 flex-1">
+                                    <slot name="main"></slot>
                                 </div>
                             </div>
                         </section>
@@ -80,6 +80,7 @@
                             </div>
                         </section>
                     </div>
+
                 </div>
             </div>
         </main>

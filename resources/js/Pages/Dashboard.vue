@@ -20,7 +20,7 @@
 <!--    </BreezeAuthenticatedLayout>-->
     <BreezeBaseLayout>
 
-        <template #default>
+        <template #main>
             Test
         </template>
 
